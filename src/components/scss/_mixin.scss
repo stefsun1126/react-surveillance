@@ -1,0 +1,8 @@
+@mixin scope-center($width) {
+    width: $width;
+    margin: 0 auto;
+}
+
+@mixin bk-color-darken($color) {
+    background-color:darken($color, 30) ;
+}

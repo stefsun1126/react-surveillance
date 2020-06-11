@@ -1,0 +1,17 @@
+/* basis */
+@import './components/scss/_variable';
+@import './components/scss/_mixin';
+@import './components/scss/_reset';
+@import './components/scss/_button';
+
+/* component */
+@import './components/scss/_main';
+@import './components/scss/_device';
+@import './components/scss/_event';
+
+
+.app {
+    display: flex;
+    flex-wrap: wrap;
+    @include scope-center($wrap-width)
+}

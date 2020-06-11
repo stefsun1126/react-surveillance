@@ -1,0 +1,51 @@
+.device {
+    width: $device-width;
+    padding-left: $padding-gap;
+
+    //// has subOptions
+    &__treeView__treeNode {
+        // 高度變0 高度會溢出
+        overflow-y: hidden;
+
+        &__child {
+            padding-left: $padding-gap;
+        }
+
+        &__text {
+            cursor: pointer;
+            display: inline-block;
+            padding: 5px 0;
+            font-size: $nomal-size;
+
+            &:hover {
+                color: $text-hover-color
+            }
+        }
+
+        &__text--selected {
+            @include bk-color-darken($item-bk-color);
+        }
+    }
+
+    // when collapsed add
+    &__treeView__treeNode--collapsed {
+        height: 0px
+    }
+
+    //// not has subOptions 
+    &__treeView__treeLeaf {
+        padding-left: $padding-gap;
+    }
+}
+
+// arrow
+.treeNode__arrow {
+    cursor: pointer;
+    margin-right: 6px;
+    display: inline-block;
+
+    // when collapsed add
+    &--collapsed {
+        transform: rotate(-90deg);
+    }
+}
