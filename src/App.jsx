@@ -1,23 +1,20 @@
-import { add_event_data, selected_item_id, unselected_item_id } from './redux/action.js'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
 
-import View from './view'
+import Device from './components/device-container/device.jsx'
+import Main from './components/main-container/main.jsx'
+import Event from './components/event-container/event.jsx'
+import './App.scss'
 
 
-const App = connect(
-  // mapStateToprops 
-  (state) => (
-    {
-      eventDatas: state.eventDatas,
-      selectedItem: state.selectedItem
+export default class App extends Component {
+
+    render() {
+        return (
+            <div className="app">
+                <Device  />
+                <Main  />
+                <Event />
+            </div>
+        );
     }
-  ),
-  // mapDispatchToProps 
-  {
-    add_event_data,
-    selected_item_id,
-    unselected_item_id
-  }
-)(View)
-
-export default App
+}

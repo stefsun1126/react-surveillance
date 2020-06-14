@@ -6,10 +6,9 @@ import { addClass } from '../../generic.js'
 export default class Button extends Component {
 
     handleOnClick = () => {
-        const { onClicks, params } = this.props
-        if (onClicks.length > 0) {
-            onClicks.map((onClick, index) => onClick(params[index]))
-        }
+        const { onClick } = this.props
+
+        onClick()
     }
 
     render() {

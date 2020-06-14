@@ -1,46 +1,36 @@
 import {
-    CLICK_MAIN_BUTTON_SCOPE,
-    CONTNET_DOUBLE_CLICK_FALSE,
-    CONTNET_DOUBLE_CLICK_TURE,
     ADD_EVENT_DATA,
     SELECTED_ITEM_ID,
-    UNSELECTED_ITEM_ID
+    CREATE_LAYOUTS,
+    DRAG_IMG,
+    DOUBLE_CLICK_MAIN_CONTENT_ITEM,
+    RESET_EVENT_DATAS,
+    RESET_SELECTED_ITEM
 } from './action-type'
 
-// for main__header__button call
-export const click_main_btn_scope = (number) => (
-    {
-        type: CLICK_MAIN_BUTTON_SCOPE,
-        data: number
-    }
-)
-
-// for main__header__button call
-export const content_double_click_false = (isDoubleClick) => (
-    {
-        type: CONTNET_DOUBLE_CLICK_FALSE,
-        data: isDoubleClick
-    }
-)
-
-// for main__content doubleClick call
-export const content_double_click_true = (isDoubleClick) => (
-    {
-        type: CONTNET_DOUBLE_CLICK_TURE,
-        data: isDoubleClick
-    }
-)
-
 // add event data
-export const add_event_data = (evenData) => (
+export const addEventData = (selectedID) => (
     {
-        type: ADD_EVENT_DATA, data: evenData
+        type: ADD_EVENT_DATA, data: selectedID
     }
 )
 
+// reset event data
+export const resetEventDatas = () => (
+    {
+        type: RESET_EVENT_DATAS
+    }
+)
+
+// reset selected item
+export const resetSelectedItem = () => (
+    {
+        type: RESET_SELECTED_ITEM
+    }
+)
 
 // selected item 
-export const selected_item_id = (item_info) => (
+export const selectedItemID = (item_info) => (
     {
         type: SELECTED_ITEM_ID,
         data: item_info
@@ -48,10 +38,38 @@ export const selected_item_id = (item_info) => (
 )
 
 
-// unselected item 
-export const unselected_item_id = () => (
+export const createLayouts = (info) => (
     {
-        type: UNSELECTED_ITEM_ID
+        type: CREATE_LAYOUTS,
+        data: {
+            scope: info.scope
+        }
     }
 )
+
+export const dropImg = (info) => (
+    {
+        type: DRAG_IMG,
+        data: {
+            url: info.url,
+            dataID: info.dataID,
+            itemID: info.itemID,
+            dataName: info.dataName
+        }
+    }
+)
+
+export const doubleClickMainContentItem = (info) => (
+    {
+        type: DOUBLE_CLICK_MAIN_CONTENT_ITEM,
+        data: {
+            itemID: info.itemID,
+        }
+    }
+)
+
+
+
+
+
 

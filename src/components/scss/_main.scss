@@ -1,6 +1,6 @@
 .main {
     width: $main-width;
-    height:$main-height;
+    height: $main-height;
     display: flex;
     flex-direction: column;
     padding-bottom: $padding-gap;
@@ -20,24 +20,22 @@
         border-width: 1px 0 0 1px;
         position: relative;
 
-        &__scope {
-
-            // 圖片置中
+        &__item {
             display: flex;
             justify-content: center;
             align-items: center;
             border: 1px solid black;
             border-width: 0 1px 1px 0;
-            
+            user-select: none;
+
             &__img {
                 cursor: pointer;
                 max-width: 100%;
                 max-height: 100%;
-
             }
 
             // 填滿 scope
-            &--full{
+            &--full {
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -64,6 +62,13 @@
             &--col16 {
                 width: 25%;
                 height: 25%;
+            }
+
+            &--selected {
+                background-color: $item-selected-color;
+                // outline: 2px solid $item-selected-color;
+                // box-shadow: 1px 1px 2px $item-selected-color;
+                // border: 1px solid $item-selected-color;
             }
         }
     }

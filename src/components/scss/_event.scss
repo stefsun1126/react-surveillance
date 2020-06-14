@@ -4,7 +4,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    overflow: auto;
 
     &__title {
         border-bottom: 1px solid black;
@@ -19,6 +18,7 @@
         list-style: none;
         margin: 0;
         flex-grow: 1;
+        overflow: auto;
 
         &__item {
             padding: $padding-text-gap $padding-gap;
@@ -29,7 +29,7 @@
 
             &:hover,
             &--selected {
-                @include bk-color-darken($item-bk-color);
+                background-color: $item-selected-color;
             }
         }
     }

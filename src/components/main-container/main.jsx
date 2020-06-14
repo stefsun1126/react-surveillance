@@ -1,22 +1,15 @@
-import { click_main_btn_scope, content_double_click_false, content_double_click_true } from './../../redux/action'
-import { connect } from 'react-redux'
+import React, { Component } from 'react'
 
-import View from './view'
+import Header from '../main-header/header'
+import Content from '../main-content/content'
 
-const Main = connect(
-    // mapStateToprops 
-    (state) => (
-        {
-            scope: state.scope,
-            doubleClickWhole: state.doubleClickWhole
-        }
-    ),
-    // mapDispatchToProps 
-    {
-        click_main_btn_scope,
-        content_double_click_false,
-        content_double_click_true
+export default class Main extends Component {
+    render() {
+        return (
+            <div className="main">
+                <Header />
+                <Content />
+            </div>
+        )
     }
-)(View)
-
-export default Main
+}

@@ -1,15 +1,14 @@
 
-export const CLICK_MAIN_BUTTON_SCOPE = 'click_main_button_scope'
+export const ADD_EVENT_DATA = 'addEventData'
 
+export const RESET_EVENT_DATAS = 'resetEventDatas'
 
-export const CONTNET_DOUBLE_CLICK_FALSE = 'content_double_click_false'
+export const SELECTED_ITEM_ID = 'selectedItemID'
 
+export const RESET_SELECTED_ITEM = 'resetSelectedItem'
 
-export const CONTNET_DOUBLE_CLICK_TURE = 'content_double_click_true'
+export const CREATE_LAYOUTS = 'createLayouts'
 
+export const DRAG_IMG = 'dragImg'
 
-export const ADD_EVENT_DATA = 'add_event_data'
-
-export const SELECTED_ITEM_ID = 'selected_item_id'
-
-export const UNSELECTED_ITEM_ID = 'unselected_item_id'
+export const DOUBLE_CLICK_MAIN_CONTENT_ITEM = 'doubleClickMainContentItem'

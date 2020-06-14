@@ -9,22 +9,15 @@ export default class Item extends Component {
 
     // select id
     handleOnClick = (id) => {
-        const { selected_item_id, selectedItem, unselected_item_id } = this.props
-        if (selectedItem.isSelected === false) {
-            // 新增選取
-            selected_item_id(id)
-        } else {
-            // 刪除選取
-            unselected_item_id()
-        }
-
-
+        const { selectedItemID} = this.props
+        // 新增選取
+        selectedItemID(id)
     }
 
     render() {
         const { eventData, selectedItem } = this.props
         // class name
-        if (selectedItem.selectedID === eventData.id && selectedItem.isSelected === true) {
+        if (selectedItem === eventData.id) {
             this.className = addClass(this.className, `${this.className}--selected`)
         }else{
             this.className = 'event__list__item'
