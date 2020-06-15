@@ -7,24 +7,27 @@
 
     &__header {
         display: flex;
-        padding: 25px 0;
-        flex-grow: 1;
+        margin-top: $margin-top;
+        margin-bottom: $margin-gap;
     }
 
     &__content {
+        flex-grow: 1;
         overflow: hidden;
-        height: 560px;
+        height: $content-height;
         display: flex;
         flex-wrap: wrap;
-        border: 1px solid black;
+        border: 1px solid $border-normal-color;
+        box-shadow: 0 2px 3px 1px rgba(255, 105, 135, .3);
         border-width: 1px 0 0 1px;
         position: relative;
 
         &__item {
             display: flex;
             justify-content: center;
+            background-color: $item-bk-color;
             align-items: center;
-            border: 1px solid black;
+            border: 1px solid $border-normal-color;
             border-width: 0 1px 1px 0;
             user-select: none;
 
@@ -41,7 +44,6 @@
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background-color: white;
             }
 
             &--col1 {
@@ -66,9 +68,6 @@
 
             &--selected {
                 background-color: $item-selected-color;
-                // outline: 2px solid $item-selected-color;
-                // box-shadow: 1px 1px 2px $item-selected-color;
-                // border: 1px solid $item-selected-color;
             }
         }
     }

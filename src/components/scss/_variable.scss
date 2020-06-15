@@ -4,16 +4,28 @@ $device-width : 25%;
 $main-width : 75%;
 
 $main-height: 600px;
+$content-height:  560px;
 
-// padding
+// padding margin
 $padding-gap :12px;
 $padding-text-gap:6px;
+
+$margin-gap :16px;
+$margin-top :25px;
+$margin-bottom :25px;
 
 
 // color
 $text-hover-color : #928845;
+
 $item-bk-color :#ffffff;
-$item-selected-color : #f4f1de;
+// FFF2F5
+// $item-selected-color : #fdc8ab75;
+$item-selected-color : #ffe3d4;
+$title-text-color :#ffffff;
+$title-bk-color:#ff975f;
+
+$border-normal-color : #FF8E53;
 
 
 // font-size

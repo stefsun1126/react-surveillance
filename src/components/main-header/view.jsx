@@ -5,7 +5,7 @@ import Button from './../basis/button.jsx'
 export default class Header extends Component {
 
     handleOnClick = (scope) => {
-        const { createLayouts, resetEventDatas, resetSelectedItem, dropImg } = this.props
+        const { createLayouts, resetEventDatas, resetSelectedItem } = this.props
         // reset main item
         createLayouts({ scope: scope })
         if (scope === 'reset') {
@@ -13,13 +13,6 @@ export default class Header extends Component {
             resetEventDatas()
             // reset selected item
             resetSelectedItem()
-            // reset img 
-            dropImg({
-                url: '',
-                dataID: '',
-                itemID: 0,
-                dataName: ''
-            })
         }
     }
 
@@ -30,7 +23,7 @@ export default class Header extends Component {
                 <Button className="button--grow" onClick={() => this.handleOnClick(4)}>4</Button>
                 <Button className="button--grow" onClick={() => this.handleOnClick(9)}>9</Button>
                 <Button className="button--grow" onClick={() => this.handleOnClick(16)}>16</Button>
-                <Button className="button--grow" onClick={() => this.handleOnClick('reset')}>reset</Button>
+                <Button className="button--grow" onClick={() => this.handleOnClick('reset')}>Reset</Button>
             </div>
         )
     }
